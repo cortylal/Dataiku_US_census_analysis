@@ -21,15 +21,19 @@ Because there were a lot of data attributes on which I had little knowledge, I d
 Below, I will detail some of the main points revealed by my approach.
 
 The first task was to reduce the number of predictors. There are 41 potential explanatory attributes, but I decided to only keep the ones that are relevant, in order to later simplify the predictive model and boost its performances by reducing noisy data.
+The following table summarizes the observations and actions I took for each column. Overall, I chose to remove columns that don’t provide additional information:
 
-* The information about the proportion of the population that is being represented by each row is not relevant, so we can delete the "INSTANCE_WEIGHT" column. 
-* I removed the columns "CHANGE_IN_MSA", "CHANGE_IN_REGION", "MOVE_WITHIN_REGION", "SAME_HOUSE_1_YEAR_AGO" AND "PREVIOUS_RESIDENCE_SUNBELT” because around half of the records in the training set didn’t have any value for those attributes: the information provided by those was limited. Similarly, less than 1% of the training set is affected by the “VETERAN_FORM” column (99% of “Not in universe”) so we can delete it, having observed that it doesn’t affect the class to predict.
-* By plotting the distribution of each class depending on “PREVIOUS_RESIDENCE_REGION”, “PREVIOUS_RESIDENCE_STATE”, “LABOR_UNION_MEMBER” or “YEAR”, it is clear that those attributes have very little effect on the class we’re looking to predict. Therefore, because they are not significant for our classification, we can remove them.
-* Also, the “UNEMPLOYMENT_REASON” is not relevant to identify people who save more or less than $50k per year, as we can rely on the “EMPLOYMENT_STATUS” to distinguish those who are unemployed. We can remove the “UNEMPLOYMENT_REASON” column.
-* Similarly, we decide to only keep the “HOUSEHOLD_SUMMARY” column as it is a simplified version of the “HOUSEHOLD_STATUS”, avoiding redundant information.
-* We can also argue that “FATHER_BIRTH_COUNTRY”, “MOTHER_BIRTH_COUNTRY”, “BIRTH_COUNTRY” and “CITIZENSHIP” are highly correlated, so we choose to keep only the “CITIZENSHIP” attribute to simplify our model.
-* The “HISPANIC_ORIGIN” information is of little interest considering that the “RACE” attribute has the predominant effect on the class category: we remove the “HISPANIC_ORIGIN” column.
-* I chose to remove columns that don’t provide additional information. For example, “INDUSTRY_CODE” lists 52 different industries whereas “MAJOR_INDUSTRY” classifies 24 industries. Same for “OCCUPATION_CODE” and “MAJOR_OCCUPATION”. We prefer to keep the “MAJOR_INDUSTRY” and “MAJOR_OCCUPATION” columns for sake of simplicity, as they also appear to better correlate with the revenue class.
+Columns | Observation | Action 
+------- | ----------- | ------
+INSTANCE_WEIGHT | Information about proportion of the population is not relevant | Deleted column
+CHANGE_IN_MSA, CHANGE_IN_REGION, MOVE_WITHIN_REGION, SAME_HOUSE_1_YEAR_AGO and PREVIOUS_RESIDENCE_SUNBELT | Half of the records don't have any value for those attributes => information provided by those is limited | Deleted columns
+VETERAN_FORM | Less than 1% of the training set is concerned (99% of "Not in universe"), and I observed that it doesn't affect the class to predict | Deleted column
+PREVIOUS_RESIDENCE_REGION, PREVIOUS_RESIDENCE_STATE, LABOR_UNION_MEMBER and YEAR | Plotted distribution of the class depending on those: they have very little effect on the class we’re looking to predict => not significant for our classification | Deleted columns
+UNEMPLOYMENT_REASON | Not relevant to identify people who save more or less than $50k per year, as we can rely on the EMPLOYMENT_STATUS to distinguish those who are unemployed | Deleted column
+HOUSEHOLD_STATUS | To avoid redundant information, we decide to keep the HOUSEHOLD_SUMMARY column as it is a simplified version of HOUSEHOLD_STATUS whilst keeping the best way to distinguish <50K and >50k | Deleted column
+FATHER_BIRTH_COUNTRY, MOTHER_BIRTH_COUNTRY and BIRTH_COUNTRY | These are highly correlated with CITIZENSHIP, so we choose to keep this last one to simplify our model | Deleted columns
+HISPANIC_ORIGIN | This information is of little interest considering that the “RACE” attribute has the predominant effect on the class category | Delete column
+INDUSTRY_CODE and OCCUPATION_CODE | We prefer to keep the MAJOR_INDUSTRY and MAJOR_OCCUPATION columns for sake of simplicity, as they appear to better correlate with the revenue class | Deleted columns
 
 I decided to remove all elements with missing values (NAs). But I kept duplicate rows that result from the removal of several columns, that still indicate the weight and frequency of the information (that wasn’t duplicate prior to the attribute selection).
 
