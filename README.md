@@ -72,7 +72,7 @@ Working in the private sector looks like the most lucrative option.
 ![Work category vs Income](/img/work_category_vs_income.png)
 
 The main work represented here are "Private", "Self-employed incorporated" (S.E. incor), "Self-employed not incorporated" (S.E. not incor) and "Not In Universe" (N.I.U).
-We observe that altough most of those earning more than $50k per year work in the "Private" sector, it is in the "SElf-employed incorporated" category that has the biggest ratio of high earners (34%).
+We observe that altough most of those earning more than $50k per year work in the "Private" sector, it is in the "Self-employed incorporated" category that has the biggest ratio of high earners (34%).
 
 #### Weeks worked vs Income
 Unsurprisingly, the more you work, the more you earn. That seems to be one of the most important criteria as we can clearly see the large dominance of people winning more than 50k in the group of those working more than 45 weeks per year.
