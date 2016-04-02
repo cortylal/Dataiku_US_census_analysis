@@ -117,6 +117,11 @@ From this, we can deduct the prediction accuracy: (185308 + 4665)/(185308 + 4665
 
 We must also point out that our GLM model is relatively precise when it comes to predicting "<50k" values (185308/(185308 + 1833) = 99%) but doesn't perform as well when it comes to predicting the ">50k" class (4665/(4665 + 7717) = 37.7%).
 
+To summarize:
+* prective accuracy = 95.2%
+* predictive accuracy of "<50k" = 99% 
+* predictive accuracy of ">50k" = 37.7%
+
 However, altough this result may help us compare the two models, we must remember that it is strongly subject to overfitting, as we evaluate the model on the same set of data on which it was previously trained!
 
 #### Simple decision tree
@@ -134,25 +139,29 @@ This provides the following results:
 * prective accuracy = 94.3%
 * predictive accuracy of "<50k" = 99.8% 
 * predictive accuracy of ">50k" = 10.5%
+
 This results are worst then the ones obtained with the GLM model.
 Just like for the previous results, we must keep in mind that they are most certainly subject to overfitting.
-
-#### Initial comparaison
 
 After training both of these models using the training set, I chose to keep the GLM model as the most accurate.
 
 #### Prective model evaluation
 
-Finally, I was able to evaluate this model on the test set. By repeating the previous methodology, we can focus on the following confusion matrix: 
+Finally, I was able to evaluate this GLM model on the test set. By repeating the previous methodology, this time on the training data set to avoid overfitting, we can focus on the following confusion matrix: 
 
 glm_pred | -50000 | 50000+
 -------- | ------ | ------
-<50k | 185308 | 7717
->50k | 1833 | 4665
+<50k | 92665  | 3841 
+>50k | 911  | 2345
 
-I obtained a predictive accuracy of X%.
+I obtained an overall predictive accuracy of X%:
+* prective accuracy = 95.2%
+* predictive accuracy of "<50k" = 99% 
+* predictive accuracy of ">50k" = 37.9%
 
-The “simplest” possible model that would always predict that an input is saving less than $50k per year (as it is the dominant class) would have had an accuracy of 93,8% on this test set (There are only 6186 entities which save more than $50k a year, out of 99762 total records).
+The accuracies are roughly the same, but we can spot a little improvement on the prediction of the ">50k" class, which is a good thing!
+
+To finish, we must not forget that the “simplest” possible model that would always predict that an input is saving less than $50k per year (as it is the dominant class) would have had an accuracy of 93,8% on this test set (There are only 6186 entities which save more than $50k a year, out of 99762 total records).
 
 Comparing the two, I can be satisfied with the result of my solution, which performs a little better.
 
