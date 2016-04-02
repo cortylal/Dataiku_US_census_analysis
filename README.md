@@ -55,9 +55,10 @@ The age segmentation was done as follows:
 *	Young (<20)
 *	Active (20-60)
 *	Senior (>60)
-Looking at the graph, we can see that there is a significant amount of variance between the ratio of >50k to <50k between the age groups. In particular, it appears that there's almost no chance of having an income greater than $50k if you are bellow 20 years old. People in the “active” category seem to earn the most.
 
 ![Age vs Income](/img/age_vs_income.png)
+
+Looking at the graph, we can see that there is a significant amount of variance between the ratio of >50k to <50k between the age groups. In particular, it appears that there's almost no chance of having an income greater than $50k if you are bellow 20 years old. People in the “active” category seem to earn the most.
 
 #### Sex vs Income
 It is interesting to see the class repartition depending on the sex: apparently, men tend to earn more than women. 
