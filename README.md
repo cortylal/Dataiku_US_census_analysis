@@ -30,4 +30,10 @@ The first task was to reduce the number of predictors. There are 41 potential ex
 * The “HISPANIC_ORIGIN” information is of little interest considering that the “RACE” attribute has the predominant effect on the class category: we remove the “HISPANIC_ORIGIN” column.
 * I chose to remove columns that don’t provide additional information. For example, “INDUSTRY_CODE” lists 52 different industries whereas “MAJOR_INDUSTRY” classifies 24 industries. Same for “OCCUPATION_CODE” and “MAJOR_OCCUPATION”. We prefer to keep the “MAJOR_INDUSTRY” and “MAJOR_OCCUPATION” columns for sake of simplicity, as they also appear to better correlate with the revenue class.
 
+I decided to remove all elements with missing values (NAs). But I kept duplicate rows that result from the removal of several columns, that still indicate the weight and frequency of the information (that wasn’t duplicate prior to the attribute selection).
 
+Overall, we can also observe that the distribution of the classes is not at all even: only 6% of the training set is composed of inputs of class “50000+.” Our model will only have a few examples from which to learn to recognize this class.
+
+Thanks to all of these data preprocessing steps, I was able to reduce the number of attributes from 41 to 21, which will considerably simplify the building of a predictive model! 
+
+## Data visualization
