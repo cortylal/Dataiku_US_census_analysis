@@ -42,8 +42,13 @@ Thanks to all of these data preprocessing steps, I was able to reduce the number
 
 ## Data visualization
 After I was done with the data preparation, I focused on producing simple but effective visual representation of the data. My goal was to highlight which feature had the biggest impact on the final class of an individual, by displaying the class repartition for the main attributes. 
-Because some attributes had a lot of possible value, I selected the variables that have a frequency difference between classes superior to a threshold = 15%
+Because some attributes had a lot of possible value, I kept the main ones when required. To do so, I kept those who had a frequency difference between classes superior to a threshold = 15%
 
 ## Predictive model
 
 ## Conclusion
+This technical test taking part in Dataiku’s recruitment process was a very interesting exercise. I enjoyed working on such a task, and hope I was able to demonstrate my analytical skills and my motivation.
+
+I was particularly challenged by the data cleaning step. Indeed, I’m used to having clean datasets provided in school courses where the objective is to focus on the analysis rather than on the data cleaning, although I’m aware that in the real world things aren’t that easy. Therefore, I had to use the knowledge I acquired when I followed online MOOCs (Data Science Specialization by the Johns Hopkins University for example) to perform this step.
+
+Overall, I think my script could be simplified with additional factorization (declare functions instead of repeating code). The global execution of the script can also be considered as long, so there might be room for optimization: perhaps there are simpler ways to perform what I did with other R add-ons, but I tried using the libraries I was familiar with. In the interest of time I chose to favor this approach.
