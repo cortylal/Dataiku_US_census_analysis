@@ -101,7 +101,29 @@ From this quick statistical analysis, we can observe that the best way to earn m
 
 I chose to test a simple decision tree versus a linear regression model.
 
-After training both of these models using the training set, I chose to keep the XXX by comparing the confusion matrices shown below:
+#### General Aditive Model (GLM)
+I trained a GLM on the previously cleaned training data, using all remaining attributes.
+The ```summary(glm_model)``` allows us to identify significant variables, being the ones with low p-values.
+After the training, we can compute the following confusion matrix:
+
+glm_pred | -50000 | 50000+
+-------- | ------ | ------
+<50k | 185308 | 7717
+>50k | 1833 | 4665
+
+This matrix must be read as follows : our GLM model has correctly predicted 185308 "<50k" and 4665 ">50k", but wrongly classified 7717 "<50k" and 1833 ">50k".
+
+From this, we can deduct the prediction accuracy: (185308 + 4665)/(185308 + 4665 + 1833 + 7717) = 95.21%
+
+We must also point out that our GLM model is relatively precise when it comes to predicting "<50k" values (185308/(185308 + 1833) = 99%) but doesn't perform as well when it comes to predicting the ">50k" class (4665/(4665 + 7717) = 37.7%).
+
+However, altough this result may help us compare the two models, we must remember that it is strongly subject to overfitting, as we evaluate the model on the same set of data on which it was previously trained!
+
+#### Simple decision tree
+
+
+After training both of these models using the training set, I chose to keep the GLM model as the most accurate.
+
 
 Finally, I was able to evaluate this model on the test set.
 
@@ -109,9 +131,7 @@ I obtained a predictive accuracy of X%.
 
 The “simplest” possible model that would always predict that an input is saving less than $50k per year (as it is the dominant class) would have had an accuracy of 93,8% on this test set (There are only 6186 entities which save more than $50k a year, out of 99762 total records).
 
-Comparing the two, I can be satisfied with the result of my solution.
-
-Comparing the two, I am disappointed with the result of my solution, although it will perform better on the long run as it is “smarter”.
+Comparing the two, I can be satisfied with the result of my solution, which performs a little better.
 
 
 ## Conclusion
