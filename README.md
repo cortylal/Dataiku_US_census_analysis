@@ -46,6 +46,17 @@ Because some attributes had a lot of possible value, I kept the main ones when r
 
 ## Predictive model
 
+I chose to test a simple decision tree versus a linear regression model.
+
+After training both of these models using the training set, I chose to keep the XXX by comparing the confusion matrices shown below:
+
+Finally, I was able to evaluate this model on the test set.
+I obtained a predictive accuracy of X%.
+The “simplest” possible model that would always predict that an input is saving less than $50k per year (as it is the dominant class) would have had an accuracy of X% on this test set.
+Comparing the two, I can be satisfied with the result of my solution.
+Comparing the two, I am disappointed with the result of my solution, although it will perform better on the long run as it is “smarter”.
+
+
 ## Conclusion
 This technical test taking part in Dataiku’s recruitment process was a very interesting exercise. I enjoyed working on such a task, and hope I was able to demonstrate my analytical skills and my motivation.
 
