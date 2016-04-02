@@ -154,7 +154,7 @@ glm_pred | -50000 | 50000+
 <50k | 92665  | 3841 
 >50k | 911  | 2345
 
-I obtained an overall predictive accuracy of X%:
+I obtained an overall predictive accuracy of 95.2%:
 * prective accuracy = 95.2%
 * predictive accuracy of "<50k" = 99% 
 * predictive accuracy of ">50k" = 37.9%
