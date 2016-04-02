@@ -45,7 +45,35 @@ After I was done with the data preparation, I focused on producing simple but ef
 Because some attributes had a lot of possible value, I kept the main ones when required. To do so, I kept those who had a frequency difference between classes superior to a threshold = 15%
 
 We start by plotting the number of entities depending on the age:
-![GitHub Logo](/img/age_distribution.png)
+![Age distribution](/img/age_distribution.png)
+This shows that most of the records are those of people aged bellow 20, or around 40. 
+Now let’s go into more detail and look for the class repartition depending on age categories:
+The age segmentation was done as follows:
+*	Young (<20)
+*	Active (20-60)
+*	Senior (>60)
+People in the “active” category seem to earn the most.
+![Age vs Income](/img/age_vs_income.png)
+
+It is interesting to see the class repartition depending on the sex:
+![Sex vs Income](/img/sex_vs_income.png)
+Apparently, men tend to earn more than women. 
+
+Working in the private sector looks like the most lucrative option.
+IMAGE
+
+Unsurprisingly, the more you work, the more you earn. That seems to be one of the most important criteria as we can clearly see the large dominance of people winning more than 50k in the group of those working more than 45 weeks per year.
+![Weeks worked vs Income](/img/weeks_worked_vs_income.png)
+
+Education seems to correlate with high salary.
+IMAGE
+
+An individual’s “race” also seems to have an impact on his annual savings, although it must more likely be the indirect consequence of education and social status. 
+IMAGE
+
+
+This step was in my opinion crucial to producing a good analysis, because studying a dataset will make more sense if you actually know what you’re looking at. 
+From this quick statistical analysis, we can observe that the best way to earn more than $50,000 per year seems to be a white married male in his 40s, working 52 weeks per year in the private sector, with a good level of education and a “joint both under 65” tax filler status.
 
 ## Predictive model
 
