@@ -1,4 +1,5 @@
 # Dataiku US census analysis
+Alexandre CORTYL - Apr 2, 2016
 This report was produced as part of the interview process at Dataiku: https://www.dataiku.com/ 
 
 ##Introduction:
