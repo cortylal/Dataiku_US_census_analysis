@@ -41,3 +41,9 @@ Overall, we can also observe that the distribution of the classes is not at all 
 Thanks to all of these data preprocessing steps, I was able to reduce the number of attributes from 41 to 21, which will considerably simplify the building of a predictive model! 
 
 ## Data visualization
+After I was done with the data preparation, I focused on producing simple but effective visual representation of the data. My goal was to highlight which feature had the biggest impact on the final class of an individual, by displaying the class repartition for the main attributes. 
+Because some attributes had a lot of possible value, I selected the variables that have a frequency difference between classes superior to a threshold = 15%
+
+## Predictive model
+
+## Conclusion
