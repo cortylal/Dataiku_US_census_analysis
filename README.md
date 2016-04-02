@@ -47,7 +47,7 @@ Because some attributes had a lot of possible value, I kept the main ones when r
 #### Age vs Income
 We start by plotting the number of entities depending on the age:
 
-![Age distribution](/img/age_distribution.png)
+<img src="img/age_distribution.png" alt="Age distribution" class="inline"/>
 
 This shows that most of the records are those of people aged bellow 20, or around 40. 
 Now let’s go into more detail and look for the class repartition depending on age categories:
