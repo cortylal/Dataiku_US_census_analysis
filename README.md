@@ -113,7 +113,7 @@ glm_pred | -50000 | 50000+
 
 This matrix must be read as follows : our GLM model has correctly predicted 185308 "<50k" and 4665 ">50k", but wrongly classified 7717 "<50k" and 1833 ">50k".
 
-From this, we can deduct the prediction accuracy: (185308 + 4665)/(185308 + 4665 + 1833 + 7717) = 95.21%
+From this, we can deduct the prediction accuracy: (185308 + 4665)/(185308 + 4665 + 1833 + 7717) = 95.2%
 
 We must also point out that our GLM model is relatively precise when it comes to predicting "<50k" values (185308/(185308 + 1833) = 99%) but doesn't perform as well when it comes to predicting the ">50k" class (4665/(4665 + 7717) = 37.7%).
 
@@ -121,11 +121,34 @@ However, altough this result may help us compare the two models, we must remembe
 
 #### Simple decision tree
 
+We then create a simple decision tree. As we produce this tree with default parameters (no reducing of mindev to allow more leaves latter pruned for example), we get a very simple tree (9 leaves) with an implicite selection of attributes on which to classify the data (MAJOR_OCCUPATION, TAX_STATUS, EDUCATION, CAPITAL_GAINS, SEX and AGE).
+
+We get the corresponding confusion matrix:
+
+tree_pred | -50000 | 50000+
+--------- | ------ | ------
+<50k | 186912 | 11076
+>50k | 229 | 1306
+
+This provides the following results:
+* prective accuracy = 94.3%
+* predictive accuracy of "<50k" = 99.8% 
+* predictive accuracy of ">50k" = 10.5%
+This results are worst then the ones obtained with the GLM model.
+Just like for the previous results, we must keep in mind that they are most certainly subject to overfitting.
+
+#### Initial comparaison
 
 After training both of these models using the training set, I chose to keep the GLM model as the most accurate.
 
+#### Prective model evaluation
 
-Finally, I was able to evaluate this model on the test set.
+Finally, I was able to evaluate this model on the test set. By repeating the previous methodology, we can focus on the following confusion matrix: 
+
+glm_pred | -50000 | 50000+
+-------- | ------ | ------
+<50k | 185308 | 7717
+>50k | 1833 | 4665
 
 I obtained a predictive accuracy of X%.
 
