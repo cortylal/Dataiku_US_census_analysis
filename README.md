@@ -90,7 +90,9 @@ Most of the high-earners have a bachelor but the proportion of them is the highe
 #### Race vs Income
 An individual’s “race” also seems to have an impact on his annual savings, although it must more likely be the indirect consequence of education and social status. 
 
-IMAGE
+![Race vs Income](/img/race_vs_income.png)
+
+The very large majority of high-earners are lableled as in the "White" category.
 
 All of these steps were in my opinion crucial to producing a good analysis, because studying a dataset will make more sense if you actually know what you’re looking at. 
 From this quick statistical analysis, we can observe that the best way to earn more than $50,000 per year seems to be a white married male in his 40s, working 52 weeks per year in the private sector, with a good level of education and a “joint both under 65” tax filler status.
