@@ -10,11 +10,12 @@ Before jumping into the analysis, I spent some time exploring the raw data, and 
 In particular, I did some research to understand the meaning of “Not in universe” values: they indicate that this attribute is not relevant for this particular individual (the universe is the population at risk of having a response for the variable in question).
 
 ## Data preparation
-I started by doing a quick exploration of the provided data set. First of all, I displayed a quick summary of all columns using summary(train_set), to have an overview of the data types, the data distribution etc.
+I started by doing a quick exploration of the provided data set. First of all, I displayed a quick summary of all columns using ``` summary(train_set)```, to have an overview of the data types, the data distribution etc.
 I looked for possible correlations with:
-* numeric_attributes <- sapply(train_set, is.numeric)
-* cor(train_set[, numeric_attributes])
-
+```R
+numeric_attributes <- sapply(train_set, is.numeric)
+cor(train_set[, numeric_attributes])
+``` 
 I also detected (with the box-and-whiskers method) and removed outliers if they seemed to be errors.
 Because there were a lot of data attributes on which I had little knowledge, I decided not to do any inconsistency check.
 Below, I will detail some of the main points revealed by my approach.
