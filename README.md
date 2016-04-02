@@ -10,7 +10,7 @@ Before jumping into the analysis, I spent some time exploring the raw data, and 
 In particular, I did some research to understand the meaning of “Not in universe” values: they indicate that this attribute is not relevant for this particular individual (the universe is the population at risk of having a response for the variable in question).
 
 ## Data preparation
-I started by doing a **quick exploration** of the provided data set. First of all, I displayed a quick summary of all columns using ``` summary(train_set)```, to have an overview of the data types, the data distribution etc.
+I started by doing a **quick exploration** of the provided data set. First of all, I displayed a quick summary of all columns using `summary(train_set)`, to have an overview of the data types, the data distribution etc.
 I looked for possible **correlations** with:
 ```R
 numeric_attributes <- sapply(train_set, is.numeric)
@@ -44,7 +44,8 @@ Thanks to all of these data preprocessing steps, I was able to reduce the number
 After I was done with the data preparation, I focused on producing simple but effective visual representation of the data. My goal was to highlight which feature had the biggest impact on the final class of an individual, by displaying the class repartition for the main attributes. 
 Because some attributes had a lot of possible value, I kept the main ones when required. To do so, I kept those who had a frequency difference between classes superior to a threshold = 15%
 
-1. We start by plotting the number of entities depending on the age:
+* We start by plotting the number of entities depending on the age:
+
 ![Age distribution](/img/age_distribution.png)
 
 This shows that most of the records are those of people aged bellow 20, or around 40. 
@@ -54,29 +55,32 @@ The age segmentation was done as follows:
 *	Active (20-60)
 *	Senior (>60)
 People in the “active” category seem to earn the most.
+
 ![Age vs Income](/img/age_vs_income.png)
 
-2. It is interesting to see the class repartition depending on the sex: apparently, men tend to earn more than women. 
+* It is interesting to see the class repartition depending on the sex: apparently, men tend to earn more than women. 
+
 ![Sex vs Income](/img/sex_vs_income.png)
 
 
-3. Working in the private sector looks like the most lucrative option.
+* Working in the private sector looks like the most lucrative option.
 
 IMAGE
 
-4. Unsurprisingly, the more you work, the more you earn. That seems to be one of the most important criteria as we can clearly see the large dominance of people winning more than 50k in the group of those working more than 45 weeks per year.
+* Unsurprisingly, the more you work, the more you earn. That seems to be one of the most important criteria as we can clearly see the large dominance of people winning more than 50k in the group of those working more than 45 weeks per year.
+
 ![Weeks worked vs Income](/img/weeks_worked_vs_income.png)
 
-5. Education seems to correlate with high salary.
+* Education seems to correlate with high salary.
 
 IMAGE
 
-6. An individual’s “race” also seems to have an impact on his annual savings, although it must more likely be the indirect consequence of education and social status. 
+* An individual’s “race” also seems to have an impact on his annual savings, although it must more likely be the indirect consequence of education and social status. 
 
 IMAGE
 
 
-This step was in my opinion crucial to producing a good analysis, because studying a dataset will make more sense if you actually know what you’re looking at. 
+All of these steps were in my opinion crucial to producing a good analysis, because studying a dataset will make more sense if you actually know what you’re looking at. 
 From this quick statistical analysis, we can observe that the best way to earn more than $50,000 per year seems to be a white married male in his 40s, working 52 weeks per year in the private sector, with a good level of education and a “joint both under 65” tax filler status.
 
 ## Predictive model
