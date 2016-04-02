@@ -44,8 +44,8 @@ Thanks to all of these data preprocessing steps, I was able to reduce the number
 After I was done with the data preparation, I focused on producing simple but effective visual representation of the data. My goal was to highlight which feature had the biggest impact on the final class of an individual, by displaying the class repartition for the main attributes. 
 Because some attributes had a lot of possible value, I kept the main ones when required. To do so, I kept those who had a frequency difference between classes superior to a threshold = 15%
 
-### Age vs Income
-* We start by plotting the number of entities depending on the age:
+#### Age vs Income
+We start by plotting the number of entities depending on the age:
 
 ![Age distribution](/img/age_distribution.png)
 
@@ -59,28 +59,28 @@ People in the “active” category seem to earn the most.
 
 ![Age vs Income](/img/age_vs_income.png)
 
-### Sex vs Income
-* It is interesting to see the class repartition depending on the sex: apparently, men tend to earn more than women. 
+#### Sex vs Income
+It is interesting to see the class repartition depending on the sex: apparently, men tend to earn more than women. 
 
 ![Sex vs Income](/img/sex_vs_income.png)
 
-### Work category vs Income
-* Working in the private sector looks like the most lucrative option.
+#### Work category vs Income
+Working in the private sector looks like the most lucrative option.
 
 IMAGE
 
-### Weeks worked vs Income
-* Unsurprisingly, the more you work, the more you earn. That seems to be one of the most important criteria as we can clearly see the large dominance of people winning more than 50k in the group of those working more than 45 weeks per year.
+#### Weeks worked vs Income
+Unsurprisingly, the more you work, the more you earn. That seems to be one of the most important criteria as we can clearly see the large dominance of people winning more than 50k in the group of those working more than 45 weeks per year.
 
 ![Weeks worked vs Income](/img/weeks_worked_vs_income.png)
 
-### Education vs Income
-* Education seems to correlate with high salary.
+#### Education vs Income
+Education seems to correlate with high salary.
 
 IMAGE
 
-### Race vs Income
-* An individual’s “race” also seems to have an impact on his annual savings, although it must more likely be the indirect consequence of education and social status. 
+#### Race vs Income
+An individual’s “race” also seems to have an impact on his annual savings, although it must more likely be the indirect consequence of education and social status. 
 
 IMAGE
 
