@@ -83,7 +83,9 @@ Unsurprisingly, the more you work, the more you earn. That seems to be an import
 #### Education vs Income
 Education seems to correlate with high salary.
 
-IMAGE
+![Education vs Income](/img/education_vs_income.png)
+
+Most of the high-earners have a bachelor but the proportion of them is the highest within the "Prof school" category (55%).
 
 #### Race vs Income
 An individual’s “race” also seems to have an impact on his annual savings, although it must more likely be the indirect consequence of education and social status. 
