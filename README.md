@@ -75,7 +75,8 @@ The main work represented here are "Private", "Self-employed incorporated" (S.E.
 We observe that altough most of those earning more than $50k per year work in the "Private" sector, it is in the "Self-employed incorporated" category that has the biggest ratio of high earners (34%).
 
 #### Weeks worked vs Income
-Unsurprisingly, the more you work, the more you earn. That seems to be one of the most important criteria as we can clearly see the large dominance of people winning more than 50k in the group of those working more than 45 weeks per year.
+Here again, because there were a large number of different values, I grouped them into three categories just like I did when comparing Age with Income.
+Unsurprisingly, the more you work, the more you earn. That seems to be an important criteria as we can clearly see the large dominance of people winning more than 50k in the group of those working more than 45 weeks per year.
 
 ![Weeks worked vs Income](/img/weeks_worked_vs_income.png)
 
