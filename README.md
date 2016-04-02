@@ -49,7 +49,7 @@ We start by plotting the number of entities depending on the age:
 
 ![Age distribution](/img/age_distribution.png)
 
-The ages range from 0 to 90 years old with the majority of entries between the ages of 0 to 20 and 30 to 50. I wasn't sure if the entries aged 0 where errors or not, but because they were so many (2839) I decided to keep them.
+The ages range from 0 to 90 years old with the majority of entries between the ages of 0 to 20 and 30 to 50. I wasn't sure if the entries aged 0 where errors or not, but because there were so many (2839) I decided to keep them.
 Now let’s go into more detail and look for the class repartition depending on age categories, because there are so many ages being represented:
 The age segmentation was done as follows:
 *	Young (<20)
