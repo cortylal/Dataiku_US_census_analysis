@@ -59,7 +59,7 @@ The age segmentation was done as follows:
 
 ![Age vs Income](/img/age_vs_income.png)
 
-Looking at the graph, we can see that there is a significant amount of variance between the ratio of >50k to <50k between the age groups. In particular, it appears that there's almost no chance of having an income greater than $50k if you are bellow 20 years old. People in the “active” category seem to earn the most.
+Looking at the graph, we can see that there is a significant amount of variance between the ratio of >50k to <50k between the age groups. In particular, it appears that there is almost no chance of having an income greater than $50k if you are bellow 20 years old. People in the “active” category seem to earn the most.
 
 #### Sex vs Income
 It is interesting to see the class repartition depending on the sex: apparently, men tend to earn more than women. 
@@ -69,7 +69,10 @@ It is interesting to see the class repartition depending on the sex: apparently,
 #### Work category vs Income
 Working in the private sector looks like the most lucrative option.
 
-IMAGE
+![Work category vs Income](/img/work_category_vs_income.png)
+
+The main work represented here are "Private", "Self-employed incorporated" (S.E. incor), "Self-employed not incorporated" (S.E. not incor) and "Not In Universe" (N.I.U).
+We observe that altough most of those earning more than $50k per year work in the "Private" sector, it is in the "SElf-employed incorporated" category that has the biggest ratio of high earners (34%).
 
 #### Weeks worked vs Income
 Unsurprisingly, the more you work, the more you earn. That seems to be one of the most important criteria as we can clearly see the large dominance of people winning more than 50k in the group of those working more than 45 weeks per year.
