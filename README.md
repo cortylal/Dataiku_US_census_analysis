@@ -49,13 +49,13 @@ We start by plotting the number of entities depending on the age:
 
 ![Age distribution](/img/age_distribution.png)
 
-This shows that most of the records are those of people aged bellow 20, or around 40. 
-Now let’s go into more detail and look for the class repartition depending on age categories:
+The ages range from 0 to 90 years old with the majority of entries between the ages of 0 to 20 and 30 to 50. I wasn't sure if the entries aged 0 where errors or not, but because they were so many (2839) I decided to keep them.
+Now let’s go into more detail and look for the class repartition depending on age categories, because there are so many ages being represented:
 The age segmentation was done as follows:
 *	Young (<20)
 *	Active (20-60)
 *	Senior (>60)
-People in the “active” category seem to earn the most.
+Looking at the graph, we can see that there is a significant amount of variance between the ratio of >50k to <50k between the age groups. In particular, it appears that there's almost no chance of having an income greater than $50k if you are bellow 20 years old. People in the “active” category seem to earn the most.
 
 ![Age vs Income](/img/age_vs_income.png)
 
