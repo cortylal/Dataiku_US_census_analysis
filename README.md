@@ -42,7 +42,7 @@ Overall, we can also observe that the distribution of the classes is not at all 
 Thanks to all of these data preprocessing steps, I was able to reduce the number of attributes from 41 to 21, which will considerably simplify the building of a predictive model! 
 
 ## Data visualization
-After I was done with the data preparation, I focused on producing simple but effective visual representation of the data. My goal was to highlight which feature had the biggest impact on the final class of an individual, by displaying the class repartition for the main attributes. 
+After I was done with the data preparation, I focused on producing simple but effective visual representation of the data. My goal was to highlight which feature had the biggest impact on the final class of an individual, by displaying the class distribution for the main attributes. 
 Because some attributes had a lot of possible value, I kept the main ones when required. To do so, I kept those who had a frequency difference between classes superior to a threshold = 15%
 
 #### Age vs Income
@@ -51,7 +51,7 @@ We start by plotting the number of entities depending on the age:
 ![Age distribution](/img/age_distribution.png)
 
 The ages range from 0 to 90 years old with the majority of entries between the ages of 0 to 20 and 30 to 50. I wasn't sure if the entries aged 0 where errors or not, but because there were so many (2839) I decided to keep them.
-Now let’s go into more detail and look for the class repartition depending on age categories, because there are so many ages being represented:
+Now let’s go into more detail and look for the class distribution depending on age categories, because there are so many ages being represented:
 The age segmentation was done as follows:
 *	Young (<20)
 *	Active (20-60)
@@ -62,7 +62,7 @@ The age segmentation was done as follows:
 Looking at the graph, we can see that there is a significant amount of variance between the ratio of >50k to <50k between the age groups. In particular, it appears that there is almost no chance of having an income greater than $50k if you are bellow 20 years old. People in the “active” category seem to earn the most.
 
 #### Sex vs Income
-It is interesting to see the class repartition depending on the sex: apparently, men tend to earn more than women. 
+It is interesting to see the class distribution depending on the sex: apparently, men tend to earn more than women. 
 
 ![Sex vs Income](/img/sex_vs_income.png)
 
@@ -72,7 +72,7 @@ Working in the private sector looks like the most lucrative option.
 ![Work category vs Income](/img/work_category_vs_income.png)
 
 The main work represented here are "Private", "Self-employed incorporated" (S.E. incor), "Self-employed not incorporated" (S.E. not incor) and "Not In Universe" (N.I.U).
-We observe that altough most of those earning more than $50k per year work in the "Private" sector, it is in the "Self-employed incorporated" category that has the biggest ratio of high earners (34%).
+We observe that although most of those earning more than $50k per year work in the "Private" sector, it is in the "Self-employed incorporated" category that has the biggest ratio of high earners (34%).
 
 #### Weeks worked vs Income
 Here again, because there were a large number of different values, I grouped them into three categories just like I did when comparing Age with Income.
@@ -94,7 +94,7 @@ An individual’s “race” also seems to have an impact on his annual savings,
 
 The very large majority of high-earners are lableled as in the "White" category.
 
-All of these steps were in my opinion crucial to producing a good analysis, because studying a dataset will make more sense if you actually know what you’re looking at. 
+All of these steps were in my opinion crucial to producing a good analysis, because studying a data set will make more sense if you actually know what you’re looking at. 
 From this quick statistical analysis, we can observe that the best way to earn more than $50,000 per year seems to be a white married male in his 40s, working 52 weeks per year in the private sector, with a good level of education and a “joint both under 65” tax filler status.
 
 ## Predictive model
@@ -122,7 +122,7 @@ To summarize:
 * predictive accuracy of "<50k" = 99% 
 * predictive accuracy of ">50k" = 37.7%
 
-However, altough this result may help us compare the two models, we must remember that it is strongly subject to overfitting, as we evaluate the model on the same set of data on which it was previously trained!
+However, although this result may help us compare the two models, we must remember that it is strongly subject to overfitting, as we evaluate the model on the same set of data on which it was previously trained!
 
 #### Simple decision tree
 
@@ -136,7 +136,7 @@ tree_pred | -50000 | 50000+
 >50k | 229 | 1306
 
 This provides the following results:
-* prective accuracy = 94.3%
+* predictive accuracy = 94.3%
 * predictive accuracy of "<50k" = 99.8% 
 * predictive accuracy of ">50k" = 10.5%
 
@@ -145,7 +145,7 @@ Just like for the previous results, we must keep in mind that they are most cert
 
 After training both of these models using the training set, I chose to keep the GLM model as the most accurate.
 
-#### Prective model evaluation
+#### Predictive model evaluation
 
 Finally, I was able to evaluate this GLM model on the test set. By repeating the previous methodology, this time on the training data set to avoid overfitting, we can focus on the following confusion matrix: 
 
@@ -159,7 +159,7 @@ I obtained an overall predictive accuracy of 95.2%:
 * predictive accuracy of "<50k" = 99% 
 * predictive accuracy of ">50k" = 37.9%
 
-The accuracies are roughly the same, but we can spot a little improvement on the prediction of the ">50k" class, which is a good thing!
+The accuracy are roughly the same, but we can spot a little improvement on the prediction of the ">50k" class, which is a good thing!
 
 To finish, we must not forget that the “simplest” possible model that would always predict that an input is saving less than $50k per year (as it is the dominant class) would have had an accuracy of 93,8% on this test set (There are only 6186 entities which save more than $50k a year, out of 99762 total records).
 
@@ -169,7 +169,7 @@ Comparing the two, I can be satisfied with the result of my solution, which perf
 ## Conclusion
 This technical test taking part in Dataiku’s recruitment process was a very interesting exercise. I enjoyed working on such a task, and hope I was able to demonstrate my analytical skills and my motivation.
 
-I was particularly challenged by the data cleaning step. Indeed, I’m used to having clean datasets provided in school courses where the objective is to focus on the analysis rather than on the data cleaning, although I’m aware that in the real world things aren’t that easy. Therefore, I had to use the knowledge I acquired when I followed online MOOCs (Data Science Specialization by the Johns Hopkins University for example) to perform this step.
+I was particularly challenged by the data cleaning step. Indeed, I’m used to having clean data sets provided in school courses where the objective is to focus on the analysis rather than on the data cleaning, although I’m aware that in the real world things aren’t that easy. Therefore, I had to use the knowledge I acquired when I followed online MOOCs (Data Science Specialization by the Johns Hopkins University for example) to perform this step.
 
 Overall, I think my script could be simplified with additional factorization (declare functions instead of repeating code). The global execution of the script can also be considered as long, so there might be room for optimization: perhaps there are simpler ways to perform what I did with other R add-ons, but I tried using the libraries I was familiar with.
 
