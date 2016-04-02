@@ -104,9 +104,13 @@ I chose to test a simple decision tree versus a linear regression model.
 After training both of these models using the training set, I chose to keep the XXX by comparing the confusion matrices shown below:
 
 Finally, I was able to evaluate this model on the test set.
+
 I obtained a predictive accuracy of X%.
-The “simplest” possible model that would always predict that an input is saving less than $50k per year (as it is the dominant class) would have had an accuracy of X% on this test set.
+
+The “simplest” possible model that would always predict that an input is saving less than $50k per year (as it is the dominant class) would have had an accuracy of 93,8% on this test set (There are only 6186 entities which save more than $50k a year, out of 99762 total records).
+
 Comparing the two, I can be satisfied with the result of my solution.
+
 Comparing the two, I am disappointed with the result of my solution, although it will perform better on the long run as it is “smarter”.
 
 
