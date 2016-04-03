@@ -210,8 +210,8 @@ table(glm_pred, train_set$CLASS) # Display confusion matrix get prediction accur
 
 # Decision tree
 dec_tree <- tree(CLASS ~ ., data = train_set)
-plot(dec_tree, uniform=TRUE, main="Classification Tree")
-text(dec_tree, use.n=TRUE, all=TRUE, cex=.8)
+plot(dec_tree, main="Classification Tree")
+text(dec_tree, cex=.8)
 tree_probs <- predict(dec_tree, type = "class")
 tree_pred = rep("<50k", length(tree_probs))
 tree_pred[tree_probs == " 50000+."] = ">50k"
