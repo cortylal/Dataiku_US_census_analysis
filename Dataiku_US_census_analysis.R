@@ -65,6 +65,7 @@ train_set <- train_set[complete.cases(train_set),]
 # ----
 
 # Age distribution graphical display
+age_distrib <- count(train_set, "AGE")
 plot(age_distrib$AGE, age_distrib$freq, main = "Age distribution", xlab = "Age", ylab = "Number of entities")
 dev.copy(png, "age_distribution.png")
 dev.off()
