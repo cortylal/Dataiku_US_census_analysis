@@ -44,7 +44,7 @@ Thanks to all of these data preprocessing steps, I was able to reduce the number
 
 ## Data visualization
 After I was done with the data preparation, I focused on producing simple but effective visual representation of the data. My goal was to highlight which feature had the biggest impact on the final class of an individual, by displaying the class distribution for the main attributes. 
-Because some attributes had a lot of possible value, I kept the main ones when required. To do so, I kept those who had a frequency difference between classes superior to a threshold = 15%
+Because some attributes had a lot of possible value, I kept the main ones when required.
 
 #### Age vs Income
 We start by plotting the number of entities depending on the age:
