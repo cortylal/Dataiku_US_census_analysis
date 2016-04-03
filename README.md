@@ -39,6 +39,7 @@ INDUSTRY_CODE and OCCUPATION_CODE | We prefer to keep the MAJOR_INDUSTRY and MAJ
 Next, I decided to remove all elements with **missing values** (NAs). But I kept **duplicate rows** that result from the removal of several columns, that still indicate the weight and frequency of the information (that wasn’t duplicate prior to the attribute selection).
 
 Overall, we can also observe that the distribution of the classes is not at all even: only 6% of the training set is composed of inputs of class “50000+.” Our model will only have a few examples from which to learn to recognize this class.
+
 Thanks to all of these data preprocessing steps, I was able to reduce the number of attributes from 41 to 21, which will considerably simplify the building of a predictive model! 
 
 ## Data visualization
